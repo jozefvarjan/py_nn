@@ -1,0 +1,27 @@
+[project]
+name = "py-nn"
+version = "0.1.0"
+description = "neural network written in plain python"
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy (>=2.4.4,<3.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini.option]
+pythonpath = ["."]
+
+[tool.poe.tasks]
+test = "pytest -v -rA ./tests/tests.py"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.3"
+poethepoet = "^0.45.0"
+
